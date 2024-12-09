@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Hector-Vigil/github.io/portfolio/",
+  "homepage": "https://hector-vigil.is-a.dev/portfolio/",
   "dependencies": {
     "@react-spring/parallax": "^9.7.5",
     "@testing-library/jest-dom": "^5.17.0",

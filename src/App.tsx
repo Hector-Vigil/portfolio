@@ -30,7 +30,7 @@ const App: React.FC = () => {
           <ParallaxLayer offset={1} factor={0.8} speed={0.2}>
             <Projects />
           </ParallaxLayer>
-          <ParallaxLayer offset={isMobile ? 2.1 : 1.8} speed={0.2}>
+          <ParallaxLayer offset={isMobile ? 2.1 : 1.82} speed={0.2}>
             <Contact />
           </ParallaxLayer>
         </Parallax>

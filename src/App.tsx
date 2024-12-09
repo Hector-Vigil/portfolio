@@ -1,24 +1,21 @@
+// src/App.tsx
 import React from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax } from '@react-spring/parallax';
 
 const App: React.FC = () => {
   return (
     <>
       <Header />
       <main>
-        <Parallax speed={-1000}>
+        <Parallax pages={2}>
           <Home />
         </Parallax>
-        <div style={{ height: '100vh' }}>
-          <Parallax speed={10}>
-            <Projects />
-          </Parallax>
-          <Contact />
-        </div>
+        <Projects />
+        <Contact />
       </main>
     </>
   );

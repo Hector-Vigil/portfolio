@@ -1,19 +1,14 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import React from 'react';
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Contact: React.FC = () => (
-  <section
-    id="contact"
-    className="flex items-center justify-center bg-gray-800 text-white p-8"
-    style={{ height: '20vh' }}
-  >
-    <div className="max-w-md mx-auto text-center">
-      <h2 className="text-3xl font-bold">Contact Me</h2>
-      <p className="mb-4">
-        Feel free to reach out to me through any of the following platforms:
-      </p>
-      <div className="flex justify-center space-x-8">
+    <section className="py-16 bg-gray-800 text-white">
+      <div className="max-w-md mx-auto text-center">
+        <h2 className="text-3xl font-bold">Contact Me</h2>
+        <p className="mb-4">
+          Feel free to reach out to me through any of the following platforms:
+        </p>
+        <div className="flex justify-center space-x-8">
         <a href="https://github.com/Hector-Vigil" target="_blank" rel="noopener noreferrer" className="text-blue-500">
           <FaGithub size={32} />
         </a>
@@ -23,9 +18,9 @@ const Contact: React.FC = () => (
         <a href="mailto:hector.vigilescalera@gmail.com" className="text-blue-500">
           <FaEnvelope size={32} />
         </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 );
 
 export default Contact;

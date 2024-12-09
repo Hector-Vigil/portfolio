@@ -1,5 +1,7 @@
+import React from 'react';
+
 const Header: React.FC = () => (
-  <header className="bg-gray-800 text-white p-4 fixed w-full top-0 z-10">
+  <header className="fixed w-full top-0 z-50 bg-gray-800 text-white p-4">
     <div className="container mx-auto flex justify-between">
       <h1 className="text-xl font-bold">My Portfolio</h1>
       <nav>
@@ -10,4 +12,5 @@ const Header: React.FC = () => (
     </div>
   </header>
 );
+
 export default Header;

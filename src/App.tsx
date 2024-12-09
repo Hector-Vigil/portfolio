@@ -10,10 +10,10 @@ import bgImage from './assets/hom-bg.jpg';
 const App: React.FC = () => {
   const parallaxRef = useRef<any>(null);
 
-  const scrollToProjects = () => {
+  const scrollTo = (index: Number) => {
     console.log("clicked", parallaxRef.current);
     if (parallaxRef.current) {
-      parallaxRef.current.scrollTo(1);
+      parallaxRef.current.scrollTo(index);
     }
   };
   // Determine if the screen is in mobile mode
@@ -21,13 +21,14 @@ const App: React.FC = () => {
 
   // Set the factor for the Projects section
   const projectsFactor = isMobile ? 1.4 : 1;
+  const generalPages = isMobile ? 0.3 : 0.2;
 
   return (
     <>
-      <Header />
+      <Header scrollTo={scrollTo} />
       <main>
         {/* Adjust total pages accordingly */}
-        <Parallax ref={parallaxRef} pages={1 + projectsFactor + 0.3}>
+        <Parallax ref={parallaxRef} pages={1 + projectsFactor + generalPages}>
           {/* Home Section */}
           <ParallaxLayer
             offset={0}
@@ -38,7 +39,7 @@ const App: React.FC = () => {
               backgroundPosition: 'center',
             }}
           >
-            <Home scrollToProjects={scrollToProjects} />
+            <Home scrollToProjects={scrollTo} />
           </ParallaxLayer>
 
           {/* Projects Section */}

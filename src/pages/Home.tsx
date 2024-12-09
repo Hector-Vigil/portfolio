@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface HomeProps {
-  scrollToProjects: () => void;
+  scrollToProjects: (index: number) => void;
 }
 
 const Home: React.FC<HomeProps> = ({ scrollToProjects }) => (
@@ -11,7 +11,7 @@ const Home: React.FC<HomeProps> = ({ scrollToProjects }) => (
       <h1 className="text-4xl font-bold">Hi, I'm Hector Vigil</h1>
       <p className="text-xl mt-2">Full Stack Developer | JavaScript Enthusiast</p>
       <button
-        onClick={scrollToProjects}
+        onClick={()=>scrollToProjects(1)}
         className="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded"
       >
         View My Work

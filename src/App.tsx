@@ -21,7 +21,7 @@ const App: React.FC = () => {
 
   // Set the factor for the Projects section
   const projectsFactor = isMobile ? 1.3 : 1;
-  const generalPages = isMobile ? 0.3 : 0.2;
+  const generalPages = isMobile ? 0.25 : 0.2;
 
   return (
     <>

@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const isMobile = window.innerWidth < 768;
 
   // Set the factor for the Projects section
-  const projectsFactor = isMobile ? 1.3 : 1;
+  const projectsFactor = isMobile ? 1.301 : 1;
   const generalPages = isMobile ? 0.3 : 0.2;
 
   return (

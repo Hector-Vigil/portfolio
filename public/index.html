@@ -55,15 +55,27 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
-  <script type="module" src="%PUBLIC_URL%/static/js/main.js"></script>
-  <script>
-    (function(){
-      var redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect != location.href) {
-        history.replaceState(null, null, redirect);
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      "url": "https://hector-vigil.is-a.dev/portfolio",
+      "name": "Portfolio - Hector Vigil",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://hector-vigil.is-a.dev/"
       }
-    })();
-  </script>
+    }
+    </script>
+    <script type="module" src="%PUBLIC_URL%/static/js/main.js"></script>
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+  </body>
 </html>
